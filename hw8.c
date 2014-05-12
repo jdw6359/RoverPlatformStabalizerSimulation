@@ -29,10 +29,19 @@ int main(int argc, char *argv[]){
 
 		for(time=0;time<maxTime;time+=step){
 
-			fprintf(stdout,"Value of time: %g\n",time);
+			double input[2];
+
+			input[0]=(3.16 * startingVals[0]) + (51.90 * startingVals[1]) + (5.64 * startingVals[2]) + (10.88 * startingVals[3]);
+
+			if((time>=12.0)&&(time<=12.5)){
+				input[1]=1.01;
+			}else{
+				input[1]=0;
+			}
+
 
 			if((strcmp(argv[1], "eu"))==0){
-				eu(4,0,startingVals,startingVals, step,f);
+				eu(4,0,startingVals,input, step,f);
 			}
 			if((strcmp(argv[1], "rk2"))==0){
 

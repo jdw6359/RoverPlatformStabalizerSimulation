@@ -22,7 +22,7 @@ ODEsolvers.o: ODEsolvers.c
 
 
 test: 
-	./hw8 eu .01 10.0 1.0 0.0 -2.0 0.2
+	./hw8 eu .01 13.0 1.0 0.0 -2.0 0.2
 
 
 

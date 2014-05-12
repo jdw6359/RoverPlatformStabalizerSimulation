@@ -7,8 +7,8 @@
 void derivativeSystem(double t, double *x, double *u, double *dx){
 	printf("determining the derivatives of x1-x4");
 
-	
-
+	dx[0]=x[2];
+	dx[1]=x[3];
 
 }
 

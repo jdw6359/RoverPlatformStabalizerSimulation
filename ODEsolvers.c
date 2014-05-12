@@ -8,7 +8,14 @@
 
 
 void eu(int neqn, double t0, double *x0, double *u0, double step, func4arg f){
-	printf("eu called\n");
+
+	double dx[2];
+
+
+
+
+
+
 }
 
 void rk2(int neqn, double t0, double *x0, double *u0, double step, func4arg f){
