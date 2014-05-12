@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #include "InvPend.h"
 
@@ -18,7 +19,15 @@ void derivativeSystem(double t, double *x, double *u, double *dx){
 
 void x3derivative(double t, double *x, double *u, double *dx){
 
-	dx[2]=1.5;
+	/* calculate seperate a,b,c,d terms. Add divide a,b,c sum by d */
+	double a,b,c,d;
+
+	a= GC * MP * sin(x[1]) * cos(x[1]);
+	b= LP * MP * x[3] * x[3] * sin(x[1]);
+	c= (1/LP) * cos(x[1]) * u[1];
+	d= MP * cos(x[1]) * cos(x[1]) - (MP + MC);
+
+	dx[2]=(a-b-u[0]+c)/d;
 
 }
 

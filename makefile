@@ -5,7 +5,7 @@ CFLAGS= -Wall -ansi -pedantic
 make: hw8
 
 hw8: hw8.o InvPend.o ODEsolvers.o
-	$(CC) $(CFLAGS) -o hw8 hw8.o InvPend.o ODEsolvers.o
+	$(CC) $(CFLAGS) -o hw8 hw8.o InvPend.o ODEsolvers.o -lm
 
 
 hw8.o: hw8.c

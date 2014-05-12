@@ -1,7 +1,7 @@
 #define MP (1.2)
 #define MC (.5)
-#define LC (.84)
-
+#define LP (.84)
+#define GC (8.9)
 
 void derivativeSystem(double, double*, double*, double*);
 
