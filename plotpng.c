@@ -29,8 +29,7 @@ int main() {
   }
 
   /* Send plot to png image file */
-  fprintf(pipe,"set terminal png enhanced font 'Vera.ttf'\n");
-  
+  fprintf(pipe,"set terminal png\n"); 
   /* Set name of png image file */
   fprintf(pipe,"set output 'invpend.png'\n");
 
@@ -44,8 +43,10 @@ int main() {
 
   /* Set parameters to draw multiple plots in the same figure */
   fprintf(pipe,"set multiplot\n");
-  fprintf(pipe,"set xrange [0:10]\n");
+  fprintf(pipe,"set xrange [0:20]\n");
   fprintf(pipe,"set yrange [-5:6]\n");
+
+
 
   /* Read simulation results and plot each trajectory */
   fprintf(pipe,"plot ");
